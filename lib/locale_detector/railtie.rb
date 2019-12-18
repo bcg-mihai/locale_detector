@@ -3,9 +3,9 @@ require 'rails'
 
 module LocaleDetector
   class Railtie < Rails::Railtie
-    initializer "locale_detector.append_before_filter" do
+    initializer "locale_detector.append_before_action" do
       ActiveSupport.on_load(:action_controller) do
-        ActionController::Base.send(:include, LocaleDetector::Filter)
+        ActionController::Base.send(:include, LocaleDetector::Action)
       end
     end
   end

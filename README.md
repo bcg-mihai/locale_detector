@@ -15,9 +15,7 @@ The best way to use this gem is to combine it either with the [exvo_globalize ge
 
 ## Requirements
 
-Rails 3.0+
-
-
+This gem requires Rails 5.0+
 
 ## Example
 
@@ -54,7 +52,7 @@ $ bundle
 
 ## Caveats
 
-Locale autodetection is done via a `before_filter` called `set_locale`, which is run before every controller action when you bundle this gem. Beware, that the `set_locale` filter will most likely be run **first**, before your other application defined filters, so if you’d like to update the `session[:language]` in your `before_filter` (to reflect the change of display language by the user) you have to place a call to `set_locale` just after setting the `sessinon[:language]` (also see the notes below on "Turning off the language detection").
+Locale autodetection is done via a `before_action` called `set_locale`, which is run before every controller action when you bundle this gem. Beware, that the `set_locale` action will most likely be run **first**, before your other application defined actions, so if you’d like to update the `session[:language]` in your `before_action` (to reflect the change of display language by the user) you have to place a call to `set_locale` just after setting the `session[:language]` (also see the notes below on "Turning off the language detection").
 
 
 
@@ -93,7 +91,6 @@ class UsersController < ApplicationController
 
 end
 ```
-
 
 
 Copyright © 2011 Exvo.com Development BV, released under the MIT license

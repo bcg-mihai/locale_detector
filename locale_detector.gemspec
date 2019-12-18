@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.version     = LocaleDetector::VERSION
   s.authors     = ["Paweł Gościcki"]
   s.email       = ["pawel.goscicki@gmail.com"]
-  s.homepage    = "https://github.com/Exvo/locale_detector"
+  s.homepage    = "https://github.com/pjg/locale_detector"
   s.summary     = "Rails gem setting the I18n.locale based on user's browser language"
   s.description = "Parses HTTP_ACCEPT_LANGUAGE http header and sets the I18n.locale based on that, if it's missing it uses toplevel regional domain suffix or falls back to I18n.default_locale"
 
@@ -19,10 +19,10 @@ Gem::Specification.new do |s|
 
   s.licenses = ['MIT']
 
-  s.add_dependency 'rails', ['>= 3.0.0']
+  s.add_dependency 'rails', ['>= 5.0.0']
   s.add_dependency 'i18n', ['>= 0.5.0']
-  s.add_development_dependency 'guard', ['>= 0.5.0']
-  s.add_development_dependency 'guard-rspec', ['>= 0.4.0']
-  s.add_development_dependency 'rspec', ['>= 2.6']
-  s.add_development_dependency 'rspec-rails', ['>= 2.6']
+  s.add_development_dependency 'guard', ['>= 2.16.0']
+  s.add_development_dependency 'guard-rspec', ['>= 4.7.3']
+  s.add_development_dependency 'rspec', ['>= 3.6']
+  s.add_development_dependency 'rspec-rails', ['>= 3.6']
 end

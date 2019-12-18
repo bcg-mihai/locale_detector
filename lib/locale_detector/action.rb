@@ -1,9 +1,9 @@
 module LocaleDetector
-  module Filter
+  module Action
     extend ActiveSupport::Concern
 
     included do
-      append_before_filter :set_locale
+      append_before_action :set_locale
     end
 
     protected

@@ -1,4 +1,4 @@
-require "locale_detector/filter"
+require "locale_detector/action"
 require "locale_detector/version"
 
 # Make it a Railtie
